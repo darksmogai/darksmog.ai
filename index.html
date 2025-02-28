@@ -1,145 +1,1162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./dsAi.png">
-    <title> Darksmog.Ai Chatbots | Future of Business Automation</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&display=swap');
-        body {
-            font-family: 'Rajdhani', sans-serif;
-            /* background: radial-gradient(circle, #000428 20%, #004e92 80%); */
-            background: linear-gradient(135deg, #020024, #090979, #00d4ff);
 
-            
-            color: white;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 700px;
-            margin: 50px auto;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 50px;
-            border-radius: 25px;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-            position: relative;
-            backdrop-filter: blur(3px);
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        .hero-img {
-            width: 250px;
-            margin-bottom: 5px;
-            /* border-radius: 50%; */
-            filter: drop-shadow(0 0 15px rgba(11, 98, 237, 0.751));
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        .platform-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .platform-icons img {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
-            transition: transform 0.3s ease-in-out;
-        }
-        .platform-icons img:hover {
-            transform: scale(1.15);
-        }
-        h2 {
-            color: #00eaff;
-            font-size: 36px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: glowText 1.5s ease-in-out infinite alternate;
-        }
-        @keyframes glowText {
-            0% { text-shadow: 0 0 15px #00eaff; }
-            100% { text-shadow: 0 0 30px #00eaff; }
-        }
-        p {
-            font-size: 20px;
-            opacity: 0.9;
-            line-height: 1.5;
-        }
-        .trust-badge {
-            font-size: 16px;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 12px 16px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-bottom: 18px;
-        }
-        input, textarea, button {
-            width: 100%;
-            margin-top: 15px;
-            padding: 16px;
-            border-radius: 10px;
-            border: none;
-            font-size: 20px;
-        }
-        input, textarea {
-            background: #112a4b;
-            color: white;
-            border: 1px solid #00eaff;
-        }
-        button {
-            background: linear-gradient(90deg, #00eaff, #0066ff);
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            border: none;
-            text-transform: uppercase;
-            box-shadow: 0 0 12px #00eaff;
-        }
-        button:hover {
-            background: linear-gradient(90deg, #0066ff, #00eaff);
-            transform: scale(1.1);
-            box-shadow: 0 0 18px #00eaff;
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            opacity: 0.7;
-        }
-    </style>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Darkmog.ai</title>
+  <link rel="icon" type="image/png" href="assets/img/dsAi.png">
+
+  <meta name="description" content="DarkSmog AI - Advanced AI-powered WhatsApp Chatbots for Business Automation.">
+  <meta name="keywords" content="AI Chatbot, WhatsApp Chatbot, WhatsApp Automation, Business AI, AI for Business, DarkSmog AI, darksmog.ai, AI Customer Support, Automated Chatbot, WhatsApp Business Automation">
+
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Updated: Nov 01 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body>
-    <div class="container">
-        <img src="./logo5.png" class="hero-img" alt="AI Chatbot Logo">
-        <h2 style="display: flex  ;   align-items: anchor-center;"><img src="./chat.png" style="width: 100%; max-width: 100px;"/> AI Chatbots - The Future is Here</h2>
-        <p>Revolutionize your business with AI-powered chatbots for **WhatsApp, Messenger, Instagram, and Websites**.</p>
-        <div class="platform-icons">
-            <img src="./whatsapp.png" alt="WhatsApp AI">
-            <img src="./insta.png" alt="Messenger AI">
-            <img src="./massenger.png" alt="Instagram AI">
-            <img src="./website.png" alt="Website AI">
-        </div>
-        <div class="trust-badge">✅ Secure | ⚡ Instant Setup | 🤖 24/7 AI Support | 🌍 Multi-Platform Integration</div>
-        <form action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="text" name="phone" placeholder="Contact Number" required>
-            <textarea name="requirement" placeholder="Tell us your business needs" required></textarea>
-            <button type="submit">Get a Free AI Demo</button>
-        </form>
-        <div class="footer">✅ Trusted by 500+ businesses worldwide</div>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/dsAi.png" alt="">
+        <h1 class="sitename">Darksmog.<span style="color:#f9d34d">ai</span></h1>
+
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li> 
+          
+          
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Get Started</a>
+
     </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-up">AI WhatsApp Chatbots – Automate, Engage, Grow!</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Boost customer interactions, generate leads, and scale your business with smart AI automation.</p>
+            <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
+              <a href="#about" class="btn-get-started">Get Started <i class="bi bi-arrow-right"></i></a>
+              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+            <img src="assets/img/chat.png" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>Who We Are</h3>
+              <h2><strong>Transforming Customer Engagement with AI Chatbots</strong></h2>
+              <p>
+                At <strong>DarkSmog AI</strong>, we craft <strong>cutting-edge AI chatbots</strong> that streamline communication across  
+                <strong>WhatsApp, Instagram, Facebook Messenger, and Websites.</strong><br>
+                Our intelligent solutions offer:  
+              </p>
+              <ul>
+                <li><strong>Instant Responses</strong> – Engage customers in real time</li>
+                <li><strong>Lead Generation</strong> – Convert conversations into sales</li>
+                <li><strong>24/7 Support</strong> – Never miss a customer query</li>
+                <li><strong>Business Growth</strong> – Automate & scale effortlessly</li>
+              </ul>
+              <p><strong>Empower your business with AI automation and stay ahead in the digital revolution.</strong></p>
+             
+              <div class="text-center text-lg-start">
+                <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>Read More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/Who-we-are.png" class="img-fluid" alt="">
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Values Section -->
+    <section id="values" class="values section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Values</h2>
+        <p>Driving Business Success with AI-Powered Innovation</p>
+      </div><!-- End Section Title -->
+    
+      <div class="container">
+        <div class="row gy-4">
+    
+          <!-- Value 1: Smart Automation -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <img src="assets/img/values-01.png" class="img-fluid" alt="AI Automation">
+              <h3>AI-Powered Automation</h3>
+              <p>Seamless automation for WhatsApp, Instagram, Messenger, and websites, ensuring 24/7 customer support.</p>
+              </div>
+          </div><!-- End Card Item -->
+    
+          <!-- Value 2: Customer-Centric Approach -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <img src="assets/img/values-02.png" class="img-fluid" alt="Customer-Centric AI">
+              <h3>Personalized User Experience</h3>
+              <p>AI chatbots that understand customer needs, respond smartly, and drive meaningful interactions.</p>
+            </div>
+          </div><!-- End Card Item -->
+    
+          <!-- Value 3: Scalability & Growth -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <img src="assets/img/values-03.png" class="img-fluid" alt="Scalability & Growth">
+              <h3>Business Growth & Scalability</h3>
+          <p>Scalable AI solutions that grow with your business, handling high-volume interactions effortlessly.</p>
+        </div>
+          </div><!-- End Card Item -->
+    
+        </div>
+      </div>
+    
+    </section><!-- /Values Section -->
+    
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Businesses</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-journal-richtext color-orange flex-shrink-0" style="color: #ee6c20;"></i>
+              <div>
+                <span  >50,000+</span>
+                <p>Chats Automated</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-headset color-green flex-shrink-0" style="color: #15be56;"></i>
+              <div>
+                <span  >24/7</span>
+                <p>24/7 Support</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-people color-pink flex-shrink-0" style="color: #bb0852;"></i>
+              <div>
+                <span >4+</span>
+                <p>Platforms Integrated</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Features</h2>
+        <p>Our Advanced Features<br></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-xl-6" data-aos="zoom-out" data-aos-delay="100">
+            <img src="assets/img/features.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-xl-6 d-flex">
+            <div class="row align-self-center gy-4">
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Instant Replies</h3>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Lead Generation
+                  </h3>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>24/7 Assistance
+                  </h3>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Multi-Platform
+                  </h3>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>AI Smart Bots
+                  </h3>
+                </div>
+              </div><!-- End Feature Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Real-Time Insights</h3>
+                </div>
+              </div><!-- End Feature Item -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+  <!-- Alt Features Section -->
+<section id="alt-features" class="alt-features section">
+
+  <div class="container">
+
+    <div class="row gy-5">
+
+      <div class="col-xl-7 d-flex order-2 order-xl-1" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="row align-self-center gy-5">
+
+          <div class="col-md-6 icon-box">
+            <i class="bi bi-award"></i>
+            <div>
+              <h4>AI-Powered Tools</h4>
+              <p>Automate responses and enhance customer interactions with intelligent AI-driven solutions.</p>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-md-6 icon-box">
+            <i class="bi bi-card-checklist"></i>
+            <div>
+              <h4>Seamless Automation</h4>
+              <p>Reduce manual effort with automated workflows, smart replies, and real-time engagement.</p>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-md-6 icon-box">
+            <i class="bi bi-dribbble"></i>
+            <div>
+              <h4>Smart Capabilities</h4>
+              <p>Chatbots that understand context, analyze data, and provide accurate responses effortlessly.</p>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-md-6 icon-box">
+            <i class="bi bi-filter-circle"></i>
+            <div>
+              <h4>Cutting-Edge AI</h4>
+              <p>Stay ahead with AI-powered chatbots designed to optimize engagement and boost efficiency.</p>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-md-6 icon-box">
+            <i class="bi bi-lightning-charge"></i>
+            <div>
+              <h4>Advanced Analytics</h4>
+              <p>Gain insights with AI-driven reports and analytics to track chatbot performance and user behavior.</p>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-md-6 icon-box">
+            <i class="bi bi-patch-check"></i>
+            <div>
+              <h4>Future-Ready Tools</h4>
+              <p>Equip your business with AI tools that adapt and evolve with changing market trends.</p>
+            </div>
+          </div><!-- End Feature Item -->
+
+        </div>
+
+      </div>
+
+      <div class="col-xl-5 d-flex align-items-center order-1 order-xl-2" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/img/alt-features.png" class="img-fluid" alt="">
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Alt Features Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Services</h2>
+        <p>Empowering Businesses with AI-Powered Solutions</p>
+      </div><!-- End Section Title -->
+    
+      <div class="container">
+    
+        <div class="row gy-4">
+    
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-cyan position-relative">
+              <i class="bi bi-robot icon"></i>
+              <h3>AI Chatbots</h3>
+              <p>Enhance customer engagement with intelligent AI chatbots that provide instant, human-like responses.</p>
+              <a href="#" class="read-more stretched-link"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+    
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange position-relative">
+              <i class="bi bi-person-check icon"></i>
+              <h3>Lead Generation AI</h3>
+              <p>Capture and qualify leads 24/7 with AI-driven conversations.</p>
+          
+              <a href="#" class="read-more stretched-link"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+    
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-teal position-relative">
+            
+              <i class="bi bi-whatsapp icon"></i>
+              <h3>WhatsApp AI Bot</h3>
+              <p>Automate customer interactions on WhatsApp with smart AI responses.</p>
+          
+              <a href="#" class="read-more stretched-link"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+    
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item item-red position-relative">
+              <i class="bi bi-graph-up-arrow icon"></i>
+              <h3>E-commerce AI Chatbot</h3>
+              <p>Provide personalized shopping assistance and automate sales.</p>
+            <a href="#" class="read-more stretched-link"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+    
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item item-indigo position-relative">
+              <i class="bi bi-gear icon"></i>
+              <h3>Custom AI Solutions</h3>
+              <p>Get tailor-made AI solutions for customer support, automation, and business efficiency.</p>
+              <a href="#" class="read-more stretched-link"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+    
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item item-pink position-relative">
+              <i class="bi bi-envelope-check icon"></i>
+              <h3>AI Email Automation</h3>
+              <p>Automate email responses with AI-powered templates and smart triggers to enhance customer experience.</p>
+              <a href="#" class="read-more stretched-link"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+    
+        </div>
+    
+      </div>
+    
+    </section><!-- /Services Section -->
+    
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
+        <p>Check Our Affordable Pricing<br></p>
+      </div><!-- End Section Title -->
+    
+      <div class="container">
+        <div class="row gy-4">
+    
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-tem">
+              <h3 style="color: #20c997;">Free Plan</h3>
+              <div class="price"><sup>₹</sup>0<span> / mo</span></div>
+              <div class="icon">
+                <i class="bi bi-box" style="color: #20c997;"></i>
+              </div>
+              <ul>
+                <li>Basic AI Chatbot</li>
+                <li>Limited Responses</li>
+                <li>No Customization</li>
+                <li class="na">Lead Capture</li>
+                <li class="na">24/7 Support</li>
+              </ul>
+              <a href="#" class="btn-buy">Get Started</a>
+            </div>
+          </div><!-- End Pricing Item -->
+    
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-tem">
+              <span class="featured">Featured</span>
+              <h3 style="color: #0dcaf0;">Starter Plan</h3>
+              <div class="price"><sup>₹</sup>1,599<span> / mo</span></div>
+              <div class="icon">
+                <i class="bi bi-send" style="color: #0dcaf0;"></i>
+              </div>
+              <ul>
+                <li>AI Chatbot with Custom Replies</li>
+                <li>Lead Capture</li>
+                <li>Basic Automation</li>
+                <li>Limited Integrations</li>
+                <li class="na">24/7 AI Support</li>
+              </ul>
+              <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+          </div><!-- End Pricing Item -->
+    
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-tem">
+              <h3 style="color: #fd7e14;">Business Plan</h3>
+              <div class="price"><sup>₹</sup>2,999<span> / mo</span></div>
+              <div class="icon">
+                <i class="bi bi-airplane" style="color: #fd7e14;"></i>
+              </div>
+              <ul>
+                <li>WhatsApp AI Bot with Smart Replies</li>
+                <li>E-commerce Integration</li>
+                <li>Advanced Automation</li>
+                <li>Payment Gateway Support</li>
+                <li>24/7 AI Support</li>
+              </ul>
+              <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+          </div><!-- End Pricing Item -->
+    
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="pricing-tem">
+              <h3 style="color: #0d6efd;">Ultimate Plan</h3>
+              <div class="price"><sup>₹</sup>4,999<span> / mo</span></div>
+              <div class="icon">
+                <i class="bi bi-rocket" style="color: #0d6efd;"></i>
+              </div>
+              <ul>
+                <li>Full AI WhatsApp Bot</li>
+                <li>Lead + Sales Automation</li>
+                <li>Unlimited Integrations</li>
+                <li>24/7 AI Customer Support</li>
+                <li>Priority Assistance</li>
+              </ul>
+              <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+          </div><!-- End Pricing Item -->
+    
+        </div><!-- End pricing row -->
+      </div>
+    
+    </section><!-- /Pricing Section -->
+    <!-- /Pricing Section -->
+
+    <section id="how-we-provide" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>How We Provide Services in 3 Simple Steps</h2>
+        <p>Our AI-powered chatbot helps businesses automate WhatsApp interactions quickly and efficiently.</p>
+      </div><!-- End Section Title -->
+    
+      <div class="container">
+        <div class="row gy-4">
+    
+          <!-- Step 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  item-orange">
+              <div class="icon">
+                <i class="bi bi-person-check" style="color: #f9d34d;"></i>
+              </div>
+              <h3>Step 1: Choose & Sign Up</h3>
+              <p>Pick a chatbot plan and sign up using your WhatsApp number. We auto-detect your business type and suggest the best chatbot template.</p>
+            </div>
+          </div><!-- End Step 1 -->
+    
+          <!-- Step 2 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange">
+              <div class="icon">
+                <i class="bi bi-gear-fill" style="color: #f9d34d;"></i>
+              </div>
+              <h3>Step 2: AI Training & Customization</h3>
+              <p>Our AI learns from your FAQs & business info. Customize greetings, responses, and actions. Live preview available before deployment.</p>
+            </div>
+          </div><!-- End Step 2 -->
+    
+          <!-- Step 3 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-orange">
+              <div class="icon">
+                <i class="bi bi-rocket-takeoff" style="color: #f9d34d;"></i>
+              </div>
+              <h3>Step 3: Deploy & Automate</h3>
+              <p>We integrate your chatbot with WhatsApp Business API. AI responds 24/7, handling 80% of queries while providing real-time insights.</p>
+            </div>
+          </div><!-- End Step 3 -->
+    
+        </div><!-- End Services Row -->
+      </div>
+    
+    </section><!-- End How We Provide Section -->
+    
+
+
+<!-- FAQ Section -->
+<section id="faq" class="faq section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>F.A.Q</h2>
+    <p>Frequently Asked Questions</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="faq-container">
+
+          <div class="faq-item faq-active">
+            <h3>What is DarkSmog AI WhatsApp chatbot?</h3>
+            <div class="faq-content">
+              <p>DarkSmog AI provides intelligent WhatsApp chatbots for businesses to automate customer interactions, handle FAQs, capture leads, and enhance customer support.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>How does the chatbot help my business?</h3>
+            <div class="faq-content">
+              <p>Our chatbot can handle customer queries, automate lead generation, manage orders, schedule appointments, and provide 24/7 support, saving you time and resources.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>Is there a free trial available?</h3>
+            <div class="faq-content">
+              <p>Yes! We offer a free plan with basic chatbot features so you can test it before upgrading to a paid plan for advanced functionalities.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+
+      </div><!-- End Faq Column-->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="faq-container">
+
+          <div class="faq-item">
+            <h3>How do I integrate the chatbot with my business?</h3>
+            <div class="faq-content">
+              <p>Simply sign up, configure your chatbot, and connect it to your WhatsApp Business account using Twilio. Our team can also assist with setup.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>Can I customize the chatbot replies?</h3>
+            <div class="faq-content">
+              <p>Yes! You can fully customize responses, automate workflows, and even train the chatbot to match your business needs.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3>What are the pricing plans?</h3>
+            <div class="faq-content">
+              <p>We offer multiple plans starting from ₹1,599/month. You can check our Pricing section for detailed features and benefits.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+
+      </div><!-- End Faq Column-->
+
+    </div>
+  </div>
+
+</section><!-- /FAQ Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>What they are saying about us<br></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+  
+    <!-- Clients Section -->
+    <section id="clients" style="display: none;" class="clients section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Clients</h2>
+        <p>We work with best clients<br></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- Recent Posts Section -->
+    <section id="recent-posts" style="display: none;" class="recent-posts section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Recent Posts</h2>
+        <p>Recent posts form our Blog</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-xl-4 col-md-6">
+            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
+                <span class="post-date">December 12</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
+                  </div>
+                </div>
+
+                <hr>
+
+                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </div>
+          </div><!-- End post item -->
+
+          <div class="col-xl-4 col-md-6">
+            <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
+                <span class="post-date">July 17</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
+                  </div>
+                </div>
+
+                <hr>
+
+                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </div>
+          </div><!-- End post item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="post-item position-relative h-100">
+
+              <div class="post-img position-relative overflow-hidden">
+                <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
+                <span class="post-date">September 05</span>
+              </div>
+
+              <div class="post-content d-flex flex-column">
+
+                <h3 class="post-title">Quia assumenda est et veritati tirana ploder</h3>
+
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>
+                  </div>
+                  <span class="px-3 text-black-50">/</span>
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
+                  </div>
+                </div>
+
+                <hr>
+
+                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+              </div>
+
+            </div>
+          </div><!-- End post item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Recent Posts Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Contact Us</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <p>Site No 12 D No 102</p>
+            <p>Silverspring Road,</p>
+            <p>Munnekollala,</p>
+            <p>Bengaluru, Karnataka - 560037</p> 
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>+91 7067927593</p>
+                  <p>+91 9934882578</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@darksmogai.com</p>
+                  <p>contact@darksmogai.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="500">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday</p>
+                  <p>9:00AM - 05:00PM</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+ 
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Darksmog.<span style="color:#f9d34d">ai</span></span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Site No 12 D No 102</p>
+            <p>Silverspring Road,</p>
+            <p>Munnekollala,</p>
+            <p>Bengaluru, Karnataka - 560037</p> 
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 7067927593</span></p>
+            <p><strong>Email:</strong> <span>darksmogai@gmail.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#" title="Go to Home">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#" title="Learn more About Us">About Us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#" title="Explore Our Services">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#" title="Read our Terms of Service">Terms of Service</a></li>
+          </ul>
+      </div>
+      
+      <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#" title="Learn about Web Design">Web Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#" title="Explore Web Development">Web Development</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#" title="Manage Your Products">Product Management</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#" title="Boost Your Marketing">Marketing</a></li>
+          </ul>
+      </div>
+      
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> 
+          <strong class="px-1 sitename">      <span class="sitename">Darksmog.<span style="color:#f9d34d">ai</span></span>
+          </strong> 
+          <span>All Rights Reserved</span>
+      </p>
+       
+  </div>
+  
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
