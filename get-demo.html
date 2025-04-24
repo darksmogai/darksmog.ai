@@ -465,17 +465,19 @@
                 codesection.style.display = 'block'; // Hide the form if shown
 
 
-                const jscodeString = `DesiBot.init({
-  userId: "${email}",
-  backendURL: "${backendURL}",
-  position: "${position}"
-});`;
+                const jscodeString = ` 
+ initDesiBot({ 
+      userId: "${email}",
+      backendUrl: "${backendURL}",
+      title: "Chat with DesiBot"
+    }); `;
 
-const reactcodeString = ` DesiBot.init({ 
-          userId: "${email}",
-  backendURL: "${backendURL}",
-  position: "${position}"
-        });`;
+const reactcodeString = ` 
+ initDesiBot({ 
+      userId: "${email}",
+      backendUrl: "${backendURL}",
+      title: "Chat with DesiBot"
+    }); `;
 
                 document.getElementById("jsCodeBlock").textContent = reactcodeString;
                 document.getElementById("htmlCodeBlock").textContent = jscodeString;
